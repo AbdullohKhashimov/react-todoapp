@@ -1,9 +1,11 @@
 import React from "react";
+import "../css/todoitem.css";
 
 function TodoItem({ item }) {
   return (
     <div>
-      <h3>{item}</h3>
+      <div className="item-list">{item}</div>
+      <hr className="line" />
     </div>
   );
 }

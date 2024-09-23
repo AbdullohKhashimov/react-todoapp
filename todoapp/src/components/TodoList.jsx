@@ -4,7 +4,7 @@ import "../css/todoitem.css";
 
 function TodoList({ todos }) {
   return (
-    <div>
+    <div className="task-list">
       {todos.map((item) => (
         <TodoItem item={item} key={item} />
       ))}
