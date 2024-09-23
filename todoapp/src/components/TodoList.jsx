@@ -2,10 +2,10 @@ import React from "react";
 import TodoItem from "./TodoItem";
 import "../css/todoitem.css";
 
-function TodoList({ clientInputs }) {
+function TodoList({ todos }) {
   return (
     <div>
-      {clientInputs.map((item) => (
+      {todos.map((item) => (
         <TodoItem item={item} key={item} />
       ))}
     </div>

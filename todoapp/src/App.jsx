@@ -4,8 +4,6 @@ import Header from "./components/Header";
 import "./css/app.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
       <Header />

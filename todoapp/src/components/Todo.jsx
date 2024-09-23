@@ -4,12 +4,12 @@ import "../css/todoitem.css";
 import TodoList from "./TodoList";
 
 function Todo() {
-  const [clientInputs, setClientInputs] = useState([]); //-> empty array is attacjed to usestate() to store array of todo list
+  const [todos, setTodos] = useState([]); //-> empty array is attacjed to usestate() to store array of todo list
 
   return (
     <div className="main">
-      <Form clientInputs={clientInputs} setClientInputs={setClientInputs} />
-      <TodoList clientInputs={clientInputs} />
+      <Form todos={todos} setTodos={setTodos} />
+      <TodoList todos={todos} />
     </div>
   );
 }
