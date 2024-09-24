@@ -2,14 +2,17 @@ import React, { useState } from "react";
 import Form from "./Form";
 import "../css/todoitem.css";
 import TodoList from "./TodoList";
+import Footer from "./Footer";
 
 function Todo() {
   const [todos, setTodos] = useState([]); //-> empty array is attacjed to usestate() to store array of todo list
-
+  const completed = todos.filter((item) => item.done).length;
+  const totalTodos = todos.length;
   return (
     <div className="main">
       <Form todos={todos} setTodos={setTodos} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} setTodos={setTodos} />
+      <Footer completed={completed} totalTodos={totalTodos} />
     </div>
   );
 }
